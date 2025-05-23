@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -10,7 +11,9 @@ pool:
   name: 'agent1'
 
 steps:
-- script: 'git clone https://github.com/IntelliqDevops/maven.git'
-  displayName: 'Download'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'git clone https://github.com/IntelliqDevops/maven.git'
 
 
