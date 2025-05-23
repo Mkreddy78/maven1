@@ -20,6 +20,9 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'cd /home/azureuser/myagent/_work/1/s;mvn package'
-
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'scp /home/azureuser/myagent/_work/1/s/webapp/target/webapp.war azureuser@4.227.137.182:/var/lib/tomcat10/webapps/mytest.war'
 
 
