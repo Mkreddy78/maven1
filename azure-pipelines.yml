@@ -23,3 +23,9 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'cp /home/azureuser/myagent/_work/2/s/webapp/target/webapp.war .'
+- script: |
+    cat << EOF > dockerfile
+    FROM tomee
+    COPY webapp.war /usr/local/tomee/webapps/myapp.war
+    EOF
+  
