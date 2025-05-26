@@ -22,4 +22,4 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'cp /home/azureuser/myagent/_work/2/s/webapp/target/webapp.war ../..'
+    script: 'cp /home/azureuser/myagent/_work/2/s/webapp/target/webapp.war .'
